@@ -14,4 +14,6 @@ protocol GameManagerProtocol {
     func startGame()
     func endGame()
     func prepareGame()
+    func isGameRunning()
+    func isGameStopped()
 }

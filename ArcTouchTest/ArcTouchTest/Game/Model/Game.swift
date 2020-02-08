@@ -18,8 +18,8 @@ struct Game {
 }
 
 struct GameResponse: Decodable {
-    var question: String
-    var answers: [String]
+    var question: String?
+    var answers: [String]?
     
     enum CodingKeys: String, CodingKey {
         case question

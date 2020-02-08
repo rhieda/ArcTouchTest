@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E3A1435423EF320A000337DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1435323EF320A000337DF /* AppDelegate.swift */; };
+		E3A1435623EF320A000337DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1435523EF320A000337DF /* SceneDelegate.swift */; };
+		E3A1435823EF320A000337DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1435723EF320A000337DF /* ViewController.swift */; };
+		E3A1435B23EF320A000337DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A1435923EF320A000337DF /* Main.storyboard */; };
+		E3A1435D23EF320C000337DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A1435C23EF320C000337DF /* Assets.xcassets */; };
+		E3A1436023EF320C000337DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A1435E23EF320C000337DF /* LaunchScreen.storyboard */; };
+		E3A1436B23EF320C000337DF /* ArcTouchTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1436A23EF320C000337DF /* ArcTouchTestTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3A1436723EF320C000337DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3A1434823EF320A000337DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3A1434F23EF320A000337DF;
+			remoteInfo = ArcTouchTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E3A1435023EF320A000337DF /* ArcTouchTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArcTouchTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A1435323EF320A000337DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E3A1435523EF320A000337DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E3A1435723EF320A000337DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E3A1435A23EF320A000337DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3A1435C23EF320C000337DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3A1435F23EF320C000337DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E3A1436123EF320C000337DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A1436623EF320C000337DF /* ArcTouchTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcTouchTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A1436A23EF320C000337DF /* ArcTouchTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcTouchTestTests.swift; sourceTree = "<group>"; };
+		E3A1436C23EF320C000337DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E3A1434D23EF320A000337DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A1436323EF320C000337DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E3A1434723EF320A000337DF = {
+			isa = PBXGroup;
+			children = (
+				E3A1435223EF320A000337DF /* ArcTouchTest */,
+				E3A1436923EF320C000337DF /* ArcTouchTestTests */,
+				E3A1435123EF320A000337DF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E3A1435123EF320A000337DF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3A1435023EF320A000337DF /* ArcTouchTest.app */,
+				E3A1436623EF320C000337DF /* ArcTouchTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E3A1435223EF320A000337DF /* ArcTouchTest */ = {
+			isa = PBXGroup;
+			children = (
+				E3A1435323EF320A000337DF /* AppDelegate.swift */,
+				E3A1435523EF320A000337DF /* SceneDelegate.swift */,
+				E3A1435723EF320A000337DF /* ViewController.swift */,
+				E3A1435923EF320A000337DF /* Main.storyboard */,
+				E3A1435C23EF320C000337DF /* Assets.xcassets */,
+				E3A1435E23EF320C000337DF /* LaunchScreen.storyboard */,
+				E3A1436123EF320C000337DF /* Info.plist */,
+			);
+			path = ArcTouchTest;
+			sourceTree = "<group>";
+		};
+		E3A1436923EF320C000337DF /* ArcTouchTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				E3A1436A23EF320C000337DF /* ArcTouchTestTests.swift */,
+				E3A1436C23EF320C000337DF /* Info.plist */,
+			);
+			path = ArcTouchTestTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E3A1434F23EF320A000337DF /* ArcTouchTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A1436F23EF320C000337DF /* Build configuration list for PBXNativeTarget "ArcTouchTest" */;
+			buildPhases = (
+				E3A1434C23EF320A000337DF /* Sources */,
+				E3A1434D23EF320A000337DF /* Frameworks */,
+				E3A1434E23EF320A000337DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArcTouchTest;
+			productName = ArcTouchTest;
+			productReference = E3A1435023EF320A000337DF /* ArcTouchTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E3A1436523EF320C000337DF /* ArcTouchTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3A1437223EF320C000337DF /* Build configuration list for PBXNativeTarget "ArcTouchTestTests" */;
+			buildPhases = (
+				E3A1436223EF320C000337DF /* Sources */,
+				E3A1436323EF320C000337DF /* Frameworks */,
+				E3A1436423EF320C000337DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3A1436823EF320C000337DF /* PBXTargetDependency */,
+			);
+			name = ArcTouchTestTests;
+			productName = ArcTouchTestTests;
+			productReference = E3A1436623EF320C000337DF /* ArcTouchTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E3A1434823EF320A000337DF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Rafael_Hieda;
+				TargetAttributes = {
+					E3A1434F23EF320A000337DF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					E3A1436523EF320C000337DF = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = E3A1434F23EF320A000337DF;
+					};
+				};
+			};
+			buildConfigurationList = E3A1434B23EF320A000337DF /* Build configuration list for PBXProject "ArcTouchTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E3A1434723EF320A000337DF;
+			productRefGroup = E3A1435123EF320A000337DF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3A1434F23EF320A000337DF /* ArcTouchTest */,
+				E3A1436523EF320C000337DF /* ArcTouchTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E3A1434E23EF320A000337DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A1436023EF320C000337DF /* LaunchScreen.storyboard in Resources */,
+				E3A1435D23EF320C000337DF /* Assets.xcassets in Resources */,
+				E3A1435B23EF320A000337DF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A1436423EF320C000337DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E3A1434C23EF320A000337DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A1435823EF320A000337DF /* ViewController.swift in Sources */,
+				E3A1435423EF320A000337DF /* AppDelegate.swift in Sources */,
+				E3A1435623EF320A000337DF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3A1436223EF320C000337DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3A1436B23EF320C000337DF /* ArcTouchTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3A1436823EF320C000337DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3A1434F23EF320A000337DF /* ArcTouchTest */;
+			targetProxy = E3A1436723EF320C000337DF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E3A1435923EF320A000337DF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3A1435A23EF320A000337DF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E3A1435E23EF320C000337DF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3A1435F23EF320C000337DF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E3A1436D23EF320C000337DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E3A1436E23EF320C000337DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E3A1437023EF320C000337DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2GEE43J5XT;
+				INFOPLIST_FILE = ArcTouchTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E3A1437123EF320C000337DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2GEE43J5XT;
+				INFOPLIST_FILE = ArcTouchTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E3A1437323EF320C000337DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2GEE43J5XT;
+				INFOPLIST_FILE = ArcTouchTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcTouchTest.app/ArcTouchTest";
+			};
+			name = Debug;
+		};
+		E3A1437423EF320C000337DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2GEE43J5XT;
+				INFOPLIST_FILE = ArcTouchTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcTouchTest.app/ArcTouchTest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E3A1434B23EF320A000337DF /* Build configuration list for PBXProject "ArcTouchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A1436D23EF320C000337DF /* Debug */,
+				E3A1436E23EF320C000337DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A1436F23EF320C000337DF /* Build configuration list for PBXNativeTarget "ArcTouchTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A1437023EF320C000337DF /* Debug */,
+				E3A1437123EF320C000337DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3A1437223EF320C000337DF /* Build configuration list for PBXNativeTarget "ArcTouchTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3A1437323EF320C000337DF /* Debug */,
+				E3A1437423EF320C000337DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E3A1434823EF320A000337DF /* Project object */;
+}

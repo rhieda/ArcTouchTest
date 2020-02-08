@@ -19,6 +19,7 @@
 		E3A1437D23EF3B86000337DF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437C23EF3B86000337DF /* GameManager.swift */; };
 		E3A1438023EF3BFE000337DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437F23EF3BFE000337DF /* Result.swift */; };
 		E3A1438223EF3F24000337DF /* GameRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1438123EF3F24000337DF /* GameRepositoryTests.swift */; };
+		E3A1438B23EF55A5000337DF /* GameManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1438A23EF55A5000337DF /* GameManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E3A1437C23EF3B86000337DF /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		E3A1437F23EF3BFE000337DF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E3A1438123EF3F24000337DF /* GameRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepositoryTests.swift; sourceTree = "<group>"; };
+		E3A1438A23EF55A5000337DF /* GameManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				E3A1436A23EF320C000337DF /* ArcTouchTestTests.swift */,
 				E3A1436C23EF320C000337DF /* Info.plist */,
 				E3A1438123EF3F24000337DF /* GameRepositoryTests.swift */,
+				E3A1438A23EF55A5000337DF /* GameManagerTests.swift */,
 			);
 			path = ArcTouchTestTests;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A1436B23EF320C000337DF /* ArcTouchTestTests.swift in Sources */,
+				E3A1438B23EF55A5000337DF /* GameManagerTests.swift in Sources */,
 				E3A1438223EF3F24000337DF /* GameRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

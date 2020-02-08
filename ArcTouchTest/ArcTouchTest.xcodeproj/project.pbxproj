@@ -14,6 +14,9 @@
 		E3A1435D23EF320C000337DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3A1435C23EF320C000337DF /* Assets.xcassets */; };
 		E3A1436023EF320C000337DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A1435E23EF320C000337DF /* LaunchScreen.storyboard */; };
 		E3A1436B23EF320C000337DF /* ArcTouchTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1436A23EF320C000337DF /* ArcTouchTestTests.swift */; };
+		E3A1437723EF3319000337DF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437623EF3319000337DF /* Game.swift */; };
+		E3A1437A23EF3B23000337DF /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437923EF3B23000337DF /* GameRepository.swift */; };
+		E3A1437D23EF3B86000337DF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437C23EF3B86000337DF /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		E3A1436623EF320C000337DF /* ArcTouchTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArcTouchTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A1436A23EF320C000337DF /* ArcTouchTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcTouchTestTests.swift; sourceTree = "<group>"; };
 		E3A1436C23EF320C000337DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A1437623EF3319000337DF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		E3A1437923EF3B23000337DF /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
+		E3A1437C23EF3B86000337DF /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,9 @@
 		E3A1435223EF320A000337DF /* ArcTouchTest */ = {
 			isa = PBXGroup;
 			children = (
+				E3A1437B23EF3B79000337DF /* Game */,
+				E3A1437823EF3B0F000337DF /* Repository */,
+				E3A1437523EF3287000337DF /* Model */,
 				E3A1435323EF320A000337DF /* AppDelegate.swift */,
 				E3A1435523EF320A000337DF /* SceneDelegate.swift */,
 				E3A1435723EF320A000337DF /* ViewController.swift */,
@@ -97,6 +106,30 @@
 				E3A1436C23EF320C000337DF /* Info.plist */,
 			);
 			path = ArcTouchTestTests;
+			sourceTree = "<group>";
+		};
+		E3A1437523EF3287000337DF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E3A1437623EF3319000337DF /* Game.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E3A1437823EF3B0F000337DF /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E3A1437923EF3B23000337DF /* GameRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		E3A1437B23EF3B79000337DF /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				E3A1437C23EF3B86000337DF /* GameManager.swift */,
+			);
+			path = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A1435823EF320A000337DF /* ViewController.swift in Sources */,
+				E3A1437D23EF3B86000337DF /* GameManager.swift in Sources */,
 				E3A1435423EF320A000337DF /* AppDelegate.swift in Sources */,
+				E3A1437A23EF3B23000337DF /* GameRepository.swift in Sources */,
 				E3A1435623EF320A000337DF /* SceneDelegate.swift in Sources */,
+				E3A1437723EF3319000337DF /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

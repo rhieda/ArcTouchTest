@@ -17,6 +17,7 @@
 		E3A1437723EF3319000337DF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437623EF3319000337DF /* Game.swift */; };
 		E3A1437A23EF3B23000337DF /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437923EF3B23000337DF /* GameRepository.swift */; };
 		E3A1437D23EF3B86000337DF /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437C23EF3B86000337DF /* GameManager.swift */; };
+		E3A1438023EF3BFE000337DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437F23EF3BFE000337DF /* Result.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		E3A1437623EF3319000337DF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		E3A1437923EF3B23000337DF /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		E3A1437C23EF3B86000337DF /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		E3A1437F23EF3BFE000337DF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		E3A1435223EF320A000337DF /* ArcTouchTest */ = {
 			isa = PBXGroup;
 			children = (
+				E3A1437E23EF3BCF000337DF /* Shared */,
 				E3A1437B23EF3B79000337DF /* Game */,
 				E3A1437823EF3B0F000337DF /* Repository */,
 				E3A1437523EF3287000337DF /* Model */,
@@ -130,6 +133,14 @@
 				E3A1437C23EF3B86000337DF /* GameManager.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		E3A1437E23EF3BCF000337DF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E3A1437F23EF3BFE000337DF /* Result.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 				E3A1437D23EF3B86000337DF /* GameManager.swift in Sources */,
 				E3A1435423EF320A000337DF /* AppDelegate.swift in Sources */,
 				E3A1437A23EF3B23000337DF /* GameRepository.swift in Sources */,
+				E3A1438023EF3BFE000337DF /* Result.swift in Sources */,
 				E3A1435623EF320A000337DF /* SceneDelegate.swift in Sources */,
 				E3A1437723EF3319000337DF /* Game.swift in Sources */,
 			);
@@ -407,7 +419,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -425,7 +437,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -446,7 +458,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcTouchTest.app/ArcTouchTest";
 			};
@@ -468,7 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hieda.rafael.ArcTouchTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArcTouchTest.app/ArcTouchTest";
 			};

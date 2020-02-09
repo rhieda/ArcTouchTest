@@ -10,37 +10,37 @@ import Foundation
 
 typealias FinishGameHandler = (GameScore) -> ()
 typealias UpdateScoreHandler = (Int) -> ()
-typealias UpdateTimeHandler = (Int) -> ()
+typealias UpdateTimeHandler = (TimeInterval) -> ()
 
 protocol GameManagerProtocol {
     var game: Game { get set }
     var timer: Timer! { get set }
-    var timeInSeconds: Int {get}
-    var timeElapsed: Int {get set}
+    var timeInSeconds: TimeInterval {get}
+    var timeElapsed: TimeInterval {get set}
     var correctAnswers: [String]! { get set }
     var gameStatus: GameState { get }
     var totalOfCorrectAnswers: Int { get }
     var finishGameHandler: FinishGameHandler { get set }
     var updateScoreHandler: UpdateScoreHandler { get set }
-    var updateTimeHandler: UpdateScoreHandler { get set }
+    var updateTimeHandler: UpdateTimeHandler { get set }
     func checkKeyword(with inputValue: String)
     func startGame()
     func endGame()
     func isGameRunning() -> Bool
     func performUpdates()
-    func timeLeft() -> Int
+    func timeLeft() -> TimeInterval
 }
 
 class GameManager: GameManagerProtocol {
     
     var game: Game
     var timer: Timer!
-    var timeInSeconds: Int
-    var timeElapsed: Int
+    var timeInSeconds: TimeInterval
+    var timeElapsed: TimeInterval
     
     var finishGameHandler: FinishGameHandler
     var updateScoreHandler: UpdateScoreHandler
-    var updateTimeHandler: UpdateScoreHandler
+    var updateTimeHandler: UpdateTimeHandler
     
     var gameStatus: GameState {
         return game.gameState
@@ -74,7 +74,7 @@ class GameManager: GameManagerProtocol {
         correctAnswers.count
     }
     
-    init(with newGame: Game, gameTimeInSeconds: Int, finishHandler: @escaping FinishGameHandler, scoreHandler: @escaping UpdateScoreHandler, timeHandler: @escaping UpdateTimeHandler) {
+    init(with newGame: Game, gameTimeInSeconds: TimeInterval, finishHandler: @escaping FinishGameHandler, scoreHandler: @escaping UpdateScoreHandler, timeHandler: @escaping UpdateTimeHandler) {
         game = newGame
         timeInSeconds = gameTimeInSeconds
         timeElapsed = 0
@@ -114,7 +114,7 @@ class GameManager: GameManagerProtocol {
         }
     }
     
-    func timeLeft() -> Int {
+    func timeLeft() -> TimeInterval {
         return (timeInSeconds - timeElapsed) >= 0 ? (timeInSeconds - timeElapsed) : 0
     }
     

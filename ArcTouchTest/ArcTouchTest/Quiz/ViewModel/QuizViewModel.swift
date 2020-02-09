@@ -85,8 +85,8 @@ extension QuizViewModel {
         uiDelegate.updateScore(with: newScore)
     }
     
-    func updateTime(with currentTime: Int) {
+    func updateTime(with currentTime: TimeInterval) {
         //perform time formatting to show up
-        uiDelegate.updateTime(with: <#T##String#>)
+//        uiDelegate.updateTime(with: <#T##String#>)
     }
 }

@@ -96,14 +96,14 @@ class GameManagerTests: XCTestCase {
         wait(for: [expectation], timeout: 15)
     }
     
-    func testKeywordShouldBeAddedIfValidAndNotInCorrectAnswersArray() {
+    func testKeywordShouldBeAddedIfCorrectInCorrectAnswersArray() {
         let correctAnswer = "abstract"
         sut = GameManager(with: game, gameTimeInSeconds: 10, finishHandler: {_ in}, scoreHandler: {_ in}, timeHandler: {_ in})
         
         //forcing to have the first answer "Abstract off" so I can add it.
-        let correctAnswers = sut.game.gameData.answers!
+        var correctAnswers = sut.game.gameData.answers!
+        correctAnswers.removeFirst() //49
         sut.correctAnswers = correctAnswers
-        sut.correctAnswers.removeFirst() //49
         sut.startGame()
         sut.checkKeyword(with: correctAnswer)
         
@@ -117,9 +117,10 @@ class GameManagerTests: XCTestCase {
         sut = GameManager(with: game, gameTimeInSeconds: 10, finishHandler: {_ in}, scoreHandler: {_ in}, timeHandler: {_ in})
         
         //forcing to have the first answer "Abstract off" so I can add it.
-        let correctAnswers = sut.game.gameData.answers!
+        var correctAnswers = sut.game.gameData.answers!
+        correctAnswers.removeLast() //49
         sut.correctAnswers = correctAnswers
-        sut.correctAnswers.removeLast() //49
+        
         sut.startGame()
         sut.checkKeyword(with: correctAnswer)
         
@@ -132,9 +133,10 @@ class GameManagerTests: XCTestCase {
         let incorrectAnswer = "publik"
         sut = GameManager(with: game, gameTimeInSeconds: 10, finishHandler: {_ in}, scoreHandler: {_ in}, timeHandler: {_ in})
         
-        let correctAnswers = sut.game.gameData.answers!
+        var correctAnswers = sut.game.gameData.answers!
+        correctAnswers.removeLast()
         sut.correctAnswers = correctAnswers
-        sut.correctAnswers.removeLast()
+        
         sut.startGame()
         sut.checkKeyword(with: incorrectAnswer)
         

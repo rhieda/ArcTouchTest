@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol QuizViewModelProtocol: class {
+protocol QuizViewModelProtocol: class, QuizViewModelHandlerProtocol {
     var uiDelegate: QuizUIDelegate { get }
     var repository: GameRepositoryProtocol { get }
     var gameManager: GameManagerProtocol! { get set }
@@ -18,11 +18,19 @@ protocol QuizViewModelProtocol: class {
     func startGame()
     func endGame()
     func submitWord(with word: String)
+    func fetchGameData()
+    func handleGameResponse(with response: Result<GameResponse>)
+}
+
+protocol QuizViewModelHandlerProtocol {
+    func finishHandler(with gameScore: GameScore)
+    func updateScoreHandler(with newScore: Int)
+    func updateTime(with currentTime: TimeInterval)
 }
 
 protocol QuizUIDelegate: class {
     func updateScore(with updatedScore: Int)
-    func updateTime(with labeledTime: String) -> String
+    func updateTime(with labeledTime: String)
     func finishGame(with gameState: GameScore)
     func displayGameDataError(with stringError: String)
 }
@@ -32,6 +40,11 @@ final class QuizViewModel: QuizViewModelProtocol {
     var repository: GameRepositoryProtocol
     var gameManager: GameManagerProtocol!
     var uiDelegate: QuizUIDelegate
+    
+    init(uiDelegate: QuizUIDelegate) {
+        repository = GameRepository(stringURL: "")
+        self.uiDelegate = uiDelegate
+    }
     
     func totalOfCorrectAnswers() -> Int {
         return gameManager.totalOfCorrectAnswers
@@ -56,27 +69,22 @@ final class QuizViewModel: QuizViewModelProtocol {
     func fetchGameData() {
         repository.fetchGameData { [weak self] (response) in
             guard let self = self else { return }
-            switch response {
-            case .success(let gameResponse):
-                let game = gameResponse.toGame()
-                self.gameManager = GameManager(with: game, gameTimeInSeconds: 300, finishHandler: self.finishHandler(with:), scoreHandler: self.updateScoreHandler(with:), timeHandler: self.updateTime(with:))
-                break
-            case .error(let error):
-                self.uiDelegate.displayGameDataError(with: error.localizedDescription)
-                break
-            }
+            self.handleGameResponse(with: response)
         }
     }
     
-    init(uiDelegate: QuizUIDelegate) {
-        repository = GameRepository(stringURL: "")
-        self.uiDelegate = uiDelegate
+    func handleGameResponse(with response: Result<GameResponse>) {
+        switch response {
+        case .success(let gameResponse):
+            let game = gameResponse.toGame()
+            gameManager = GameManager(with: game, gameTimeInSeconds: 300, finishHandler: self.finishHandler(with:), scoreHandler: self.updateScoreHandler(with:), timeHandler: self.updateTime(with:))
+            break
+        case .error(let error):
+            uiDelegate.displayGameDataError(with: error.localizedDescription)
+            break
+        }
     }
         
-}
-
-extension QuizViewModel {
-    
     func finishHandler(with gameScore: GameScore) {
         uiDelegate.finishGame(with: gameScore)
     }
@@ -88,6 +96,7 @@ extension QuizViewModel {
     func updateTime(with currentTime: TimeInterval) {
         uiDelegate.updateTime(with: TimeToStringHelper.timeToMinutes(with: currentTime))
     }
+        
 }
 
 class TimeToStringHelper {

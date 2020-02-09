@@ -91,6 +91,8 @@ class GameManager: GameManagerProtocol {
     
     func endGame() {
         game.gameState = .finished
+        guard let timer = timer else { return }
+        timer.invalidate()
         if timeElapsed < timeInSeconds && (correctAnswers.count == answers.count) {
             finishGameHandler(.win)
         } else {
@@ -109,7 +111,7 @@ class GameManager: GameManagerProtocol {
                 timer.invalidate()
                 endGame()
             } else {
-                updateTimeHandler(timeElapsed)
+                updateTimeHandler(timeLeft())
             }
         }
     }

@@ -22,6 +22,7 @@
 		E3A1438B23EF55A5000337DF /* GameManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1438A23EF55A5000337DF /* GameManagerTests.swift */; };
 		E3A1438D23EF5EE4000337DF /* GameResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E3A1438C23EF5EE4000337DF /* GameResponse.json */; };
 		E3A1439123F060C7000337DF /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1439023F060C7000337DF /* QuizViewModel.swift */; };
+		E3A1439323F073FD000337DF /* QuizViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1439223F073FD000337DF /* QuizViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E3A1438A23EF55A5000337DF /* GameManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerTests.swift; sourceTree = "<group>"; };
 		E3A1438C23EF5EE4000337DF /* GameResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GameResponse.json; sourceTree = "<group>"; };
 		E3A1439023F060C7000337DF /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		E3A1439223F073FD000337DF /* QuizViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				E3A1438123EF3F24000337DF /* GameRepositoryTests.swift */,
 				E3A1438A23EF55A5000337DF /* GameManagerTests.swift */,
 				E3A1438C23EF5EE4000337DF /* GameResponse.json */,
+				E3A1439223F073FD000337DF /* QuizViewModelTests.swift */,
 			);
 			path = ArcTouchTestTests;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				E3A1436B23EF320C000337DF /* ArcTouchTestTests.swift in Sources */,
 				E3A1438B23EF55A5000337DF /* GameManagerTests.swift in Sources */,
 				E3A1438223EF3F24000337DF /* GameRepositoryTests.swift in Sources */,
+				E3A1439323F073FD000337DF /* QuizViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

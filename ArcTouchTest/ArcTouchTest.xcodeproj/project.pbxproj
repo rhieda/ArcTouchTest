@@ -20,6 +20,7 @@
 		E3A1438023EF3BFE000337DF /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1437F23EF3BFE000337DF /* Result.swift */; };
 		E3A1438223EF3F24000337DF /* GameRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1438123EF3F24000337DF /* GameRepositoryTests.swift */; };
 		E3A1438B23EF55A5000337DF /* GameManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A1438A23EF55A5000337DF /* GameManagerTests.swift */; };
+		E3A1438D23EF5EE4000337DF /* GameResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E3A1438C23EF5EE4000337DF /* GameResponse.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		E3A1437F23EF3BFE000337DF /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		E3A1438123EF3F24000337DF /* GameRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepositoryTests.swift; sourceTree = "<group>"; };
 		E3A1438A23EF55A5000337DF /* GameManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManagerTests.swift; sourceTree = "<group>"; };
+		E3A1438C23EF5EE4000337DF /* GameResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GameResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				E3A1436C23EF320C000337DF /* Info.plist */,
 				E3A1438123EF3F24000337DF /* GameRepositoryTests.swift */,
 				E3A1438A23EF55A5000337DF /* GameManagerTests.swift */,
+				E3A1438C23EF5EE4000337DF /* GameResponse.json */,
 			);
 			path = ArcTouchTestTests;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A1438D23EF5EE4000337DF /* GameResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

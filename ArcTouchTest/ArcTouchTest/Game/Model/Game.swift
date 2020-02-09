@@ -38,3 +38,8 @@ enum GameState {
     case finished
 }
 
+enum GameScore {
+    case win
+    case loss(Int)
+}
+

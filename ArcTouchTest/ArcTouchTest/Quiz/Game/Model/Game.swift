@@ -17,6 +17,12 @@ struct Game {
     }
 }
 
+extension GameResponse {
+    func toGame() -> Game {
+        return Game(with: self)
+    }
+}
+
 struct GameResponse: Decodable {
     var question: String?
     var answers: [String]?

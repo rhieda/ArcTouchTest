@@ -22,7 +22,7 @@ protocol QuizViewModelProtocol: class {
 
 protocol QuizUIDelegate: class {
     func updateScore(with updatedScore: Int)
-    func updateTime(with labeledTime: String)
+    func updateTime(with labeledTime: String) -> String
     func finishGame(with gameState: GameScore)
     func displayGameDataError(with stringError: String)
 }
@@ -86,7 +86,15 @@ extension QuizViewModel {
     }
     
     func updateTime(with currentTime: TimeInterval) {
-        //perform time formatting to show up
-//        uiDelegate.updateTime(with: <#T##String#>)
+        uiDelegate.updateTime(with: TimeToStringHelper.timeToMinutes(with: currentTime))
+    }
+}
+
+class TimeToStringHelper {
+    static func timeToMinutes(with inputTime: TimeInterval) -> String {
+        let minutes = Int(inputTime) / 3600
+        let seconds = Int(inputTime) / 60 % 60
+        let formattedTimeString = String(format: "%02i:%02i", minutes, seconds)
+        return formattedTimeString
     }
 }

@@ -93,7 +93,7 @@ final class QuizViewModel: QuizViewModelProtocol {
         switch response {
         case .success(let gameResponse):
             let game = gameResponse.toGame()
-            gameManager = GameManager(with: game, gameTimeInSeconds: 10, finishHandler: self.finishHandler(with:), scoreHandler: self.updateScoreHandler(with:), timeHandler: self.updateTime(with:))
+            gameManager = GameManager(with: game, gameTimeInSeconds: 300, finishHandler: self.finishHandler(with:), scoreHandler: self.updateScoreHandler(with:), timeHandler: self.updateTime(with:))
             break
         case .error(let error):
             uiDelegate.displayGameDataError(with: error.localizedDescription)

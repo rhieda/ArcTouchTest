@@ -21,7 +21,7 @@ class QuizViewController: UIViewController {
         setupDelegates()
         viewModel = QuizViewModel(uiDelegate: self)
         viewModel.fetchGameData()
-        registerNotificationForKeyboardChanges()
+        showSpinner(onView: self.view)
         
     }
     
@@ -36,31 +36,7 @@ class QuizViewController: UIViewController {
         tableView.delegate = self
         gameControl.delegate = self
     }
-    
-    func registerNotificationForKeyboardChanges() {
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillChange), name: UIResponder.keyboardWillShowNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillChange), name: UIResponder.keyboardWillHideNotification, object: nil)
-        notificationCenter.addObserver(self, selector: #selector(keyboardWillChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-    }
-    
-    @objc func keyboardWillChange(notification: Notification) {
-        if let userInfo = notification.userInfo {
-            if let keyboardSize = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-                let bottomHeightConstant = keyboardSize.height
-                gameControl.frame.origin.y -= bottomHeightConstant
-            }
-        }
-        
-    }
-    
-    deinit {
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.removeObserver(self, name: UIApplication.keyboardWillShowNotification, object: nil)
-        notificationCenter.removeObserver(self, name: UIApplication.keyboardWillHideNotification, object: nil)
-        notificationCenter.removeObserver(self, name: UIApplication.keyboardWillChangeFrameNotification, object: nil)
-    }
-    
+
 }
 
 extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
@@ -84,6 +60,7 @@ extension QuizViewController: UITableViewDataSource, UITableViewDelegate {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "TitleTableViewCell") as! TitleTableViewCell
             cell.questionLabel.text = viewModel.gameManager == nil ? "" : viewModel.gameManager.gameQuestion
+            removeSpinner()
             return cell
         } else if indexPath.section == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell") as! SearchTableViewCell
@@ -192,3 +169,30 @@ final class AlertControllerBuilder {
         return alertController
     }
 }
+
+
+var vSpinner : UIView?
+extension UIViewController {
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+        let ai = UIActivityIndicatorView.init(style: .whiteLarge)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
+    
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
+    }
+}
+

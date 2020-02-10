@@ -12,11 +12,13 @@ protocol QuizViewModelProtocol: class, QuizViewModelHandlerProtocol {
     var uiDelegate: QuizUIDelegate { get }
     var repository: GameRepositoryProtocol { get }
     var gameManager: GameManagerProtocol! { get set }
+    var gameState: GameState { get }
     
     func totalOfCorrectAnswers() -> Int
     func answerFor(indexPath: IndexPath) -> String
     func startGame()
     func endGame()
+    func resetGame()
     func submitWord(with word: String)
     func fetchGameData()
     func handleGameResponse(with response: Result<GameResponse>)
@@ -36,18 +38,26 @@ protocol QuizUIDelegate: class {
 }
 
 final class QuizViewModel: QuizViewModelProtocol {
-    
+        
     var repository: GameRepositoryProtocol
     var gameManager: GameManagerProtocol!
     var uiDelegate: QuizUIDelegate
     
+    var gameState: GameState {
+        return gameManager.gameStatus
+    }
+    
     init(uiDelegate: QuizUIDelegate) {
-        repository = GameRepository(stringURL: "")
+        repository = GameRepository(stringURL: "https://codechallenge.arctouch.com/quiz/1")
         self.uiDelegate = uiDelegate
     }
     
     func totalOfCorrectAnswers() -> Int {
         return gameManager.totalOfCorrectAnswers
+    }
+    
+    func totalOfAnswers() -> Int {
+        return gameManager.game.gameData.answers!.count
     }
     
     func answerFor(indexPath: IndexPath) -> String {
@@ -60,6 +70,12 @@ final class QuizViewModel: QuizViewModelProtocol {
     
     func endGame() {
         gameManager.endGame()
+    }
+    
+    func resetGame() {
+        gameManager.endGame()
+        gameManager.correctAnswers = []
+        gameManager.timeElapsed = 0
     }
     
     func submitWord(with word: String) {
@@ -77,7 +93,7 @@ final class QuizViewModel: QuizViewModelProtocol {
         switch response {
         case .success(let gameResponse):
             let game = gameResponse.toGame()
-            gameManager = GameManager(with: game, gameTimeInSeconds: 300, finishHandler: self.finishHandler(with:), scoreHandler: self.updateScoreHandler(with:), timeHandler: self.updateTime(with:))
+            gameManager = GameManager(with: game, gameTimeInSeconds: 10, finishHandler: self.finishHandler(with:), scoreHandler: self.updateScoreHandler(with:), timeHandler: self.updateTime(with:))
             break
         case .error(let error):
             uiDelegate.displayGameDataError(with: error.localizedDescription)
@@ -101,8 +117,8 @@ final class QuizViewModel: QuizViewModelProtocol {
 
 class TimeToStringHelper {
     static func timeToMinutes(with inputTime: TimeInterval) -> String {
-        let minutes = Int(inputTime) / 3600
-        let seconds = Int(inputTime) / 60 % 60
+        let minutes = Int(inputTime) / 60 % 60
+        let seconds = Int(inputTime) % 60
         let formattedTimeString = String(format: "%02i:%02i", minutes, seconds)
         return formattedTimeString
     }

@@ -15,6 +15,13 @@ struct Game {
         gameState = .finished
         self.gameData = gameData
     }
+    var totalOfAnswers: Int {
+        gameData.answers?.count ?? 0
+    }
+    
+    var answers: [String] {
+        gameData.answers ?? []
+    }
 }
 
 extension GameResponse {

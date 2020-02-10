@@ -18,11 +18,13 @@ protocol GameManagerProtocol {
     var timeInSeconds: TimeInterval {get}
     var timeElapsed: TimeInterval {get set}
     var correctAnswers: [String]! { get set }
-    var gameStatus: GameState { get }
     var totalOfCorrectAnswers: Int { get }
+    var gameStatus: GameState { get }
+    var totalOfAnswers: Int {get}
     var finishGameHandler: FinishGameHandler { get set }
     var updateScoreHandler: UpdateScoreHandler { get set }
     var updateTimeHandler: UpdateTimeHandler { get set }
+    var gameQuestion: String { get }
     func checkKeyword(with inputValue: String)
     func startGame()
     func endGame()
@@ -74,6 +76,10 @@ class GameManager: GameManagerProtocol {
         correctAnswers.count
     }
     
+    var totalOfAnswers: Int {
+        game.totalOfAnswers
+    }
+    
     init(with newGame: Game, gameTimeInSeconds: TimeInterval, finishHandler: @escaping FinishGameHandler, scoreHandler: @escaping UpdateScoreHandler, timeHandler: @escaping UpdateTimeHandler) {
         game = newGame
         timeInSeconds = gameTimeInSeconds
@@ -86,11 +92,13 @@ class GameManager: GameManagerProtocol {
     
     func startGame() {
         game.gameState = .started
-        self.timer = Timer(timeInterval: 1, target: self, selector: #selector(performUpdates), userInfo: nil, repeats: false)
+        correctAnswers = []
+        self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(performUpdates), userInfo: nil, repeats: true)
     }
     
     func endGame() {
         game.gameState = .finished
+        timeElapsed = 0
         guard let timer = timer else { return }
         timer.invalidate()
         if timeElapsed < timeInSeconds && (correctAnswers.count == answers.count) {
@@ -109,6 +117,7 @@ class GameManager: GameManagerProtocol {
             timeElapsed += 1
             if timeElapsed >= timeInSeconds {
                 timer.invalidate()
+                updateTimeHandler(timeLeft())
                 endGame()
             } else {
                 updateTimeHandler(timeLeft())
@@ -117,7 +126,8 @@ class GameManager: GameManagerProtocol {
     }
     
     func timeLeft() -> TimeInterval {
-        return (timeInSeconds - timeElapsed) >= 0 ? (timeInSeconds - timeElapsed) : 0
+        let time = (timeInSeconds - timeElapsed)
+        return time >= 0 ? time : 0
     }
     
     func checkKeyword(with inputValue: String) {
